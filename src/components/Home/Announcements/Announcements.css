@@ -1,0 +1,10 @@
+.card_title {
+	font-size: x-large;
+	text-align: center;
+}
+
+.card_body {
+	width: 100%;
+	max-height: 15vh;
+	overflow-y: auto;
+}
