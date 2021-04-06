@@ -2,6 +2,7 @@ import React from 'react';
 import Announcements from './Announcements/Announcements';
 import './Home.css';
 import Slider from './Slider/Slider';
+import Upload from './UploadForm/Upload';
 import Vision from './Vision/Vision';
 
 function Home() {
@@ -10,6 +11,7 @@ function Home() {
 			<Slider />
 			<Vision />
 			<Announcements />
+			<Upload />
 		</div>
 	);
 }
