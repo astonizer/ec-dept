@@ -1,5 +1,5 @@
 import React from 'react';
-import { Nav, Navbar, Container } from 'react-bootstrap';
+import { Nav, Navbar, Container, NavDropdown } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import './Header.css';
 import logo from '../../assets/logo.png';
@@ -10,7 +10,7 @@ function Header() {
 			<Navbar expand="lg" className="bg-dark">
 				<Container>
 					<Navbar.Brand
-						href="#home"
+						href="#"
 						className="text-light m-auto topmost"
 					>
 						<img src={logo} className="logo" alt="" />
@@ -27,7 +27,7 @@ function Header() {
 					</Navbar.Brand>
 				</Container>
 			</Navbar>
-			<Navbar expand="lg" className="bg-dark">
+			<Navbar expand="lg" bg="dark" variant="dark">
 				<Container>
 					<Navbar.Toggle aria-controls="basic-navbar-nav" />
 					<Navbar.Collapse id="basic-navbar-nav">
@@ -35,16 +35,70 @@ function Header() {
 							<LinkContainer to="/">
 								<Nav.Link className="text-light">Home</Nav.Link>
 							</LinkContainer>
-							<LinkContainer to="/contact">
-								<Nav.Link className="text-light">
-									Contact
-								</Nav.Link>
-							</LinkContainer>
-							<LinkContainer to="/about">
-								<Nav.Link className="text-light">
-									About
-								</Nav.Link>
-							</LinkContainer>
+							<NavDropdown
+								title="Academics"
+								id="basic-nav-dropdown"
+								className="text-light"
+							>
+								<LinkContainer to="/academics/admissions">
+									<NavDropdown.Item href="#">
+										Admission
+									</NavDropdown.Item>
+								</LinkContainer>
+								<LinkContainer to="/academics/btech">
+									<NavDropdown.Item href="#">
+										B.Tech. (E.C.)
+									</NavDropdown.Item>
+								</LinkContainer>
+								<LinkContainer to="/academics/mtech">
+									<NavDropdown.Item href="#">
+										M.Tech (CS/VLSI)
+									</NavDropdown.Item>
+								</LinkContainer>
+								<LinkContainer to="/academics/phd">
+									<NavDropdown.Item href="#">
+										Ph. D. Electronics Engineering
+									</NavDropdown.Item>
+								</LinkContainer>
+							</NavDropdown>
+							<NavDropdown
+								title="Research"
+								id="basic-nav-dropdown"
+								className="text-light"
+							>
+								<NavDropdown.Item href="#action/3.1">
+									Action
+								</NavDropdown.Item>
+								<NavDropdown.Item href="#action/3.2">
+									Another action
+								</NavDropdown.Item>
+								<NavDropdown.Item href="#action/3.3">
+									Something
+								</NavDropdown.Item>
+								<NavDropdown.Divider />
+								<NavDropdown.Item href="#action/3.4">
+									Separated link
+								</NavDropdown.Item>
+							</NavDropdown>
+							<NavDropdown
+								title="People"
+								id="basic-nav-dropdown"
+								className="text-light"
+							>
+								<NavDropdown.Item href="#action/3.1">
+									Action
+								</NavDropdown.Item>
+								<NavDropdown.Item href="#action/3.2">
+									Another action
+								</NavDropdown.Item>
+								<NavDropdown.Item href="#action/3.3">
+									Something
+								</NavDropdown.Item>
+								<NavDropdown.Divider />
+								<NavDropdown.Item href="#action/3.4">
+									Separated link
+								</NavDropdown.Item>
+							</NavDropdown>
 						</Nav>
 					</Navbar.Collapse>
 				</Container>
