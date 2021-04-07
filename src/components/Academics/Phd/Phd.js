@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Card, Col, Container, Row } from 'react-bootstrap';
+import { Button, Card, Container } from 'react-bootstrap';
 import './Phd.css';
 
 function Phd() {
