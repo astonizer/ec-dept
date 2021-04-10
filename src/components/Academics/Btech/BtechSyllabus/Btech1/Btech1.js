@@ -1,5 +1,6 @@
 import React from 'react';
 import { Table } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 function Btech1() {
 	const table = [
@@ -101,14 +102,26 @@ function Btech1() {
 				</thead>
 				<tbody>
 					{table.map(entry => {
-						return (
-							<tr key={entry.id}>
-								<td className="p-3">{entry.id}</td>
-								<td className="p-3">{entry.title}</td>
-								<td className="p-3">{entry.code}</td>
-								<td className="p-3">{entry.dept}</td>
-							</tr>
-						);
+						if (entry.id != 10)
+							return (
+								<tr key={entry.id}>
+									<td className="p-3">{entry.id}</td>
+									<td className="p-3">{entry.title}</td>
+									<td className="p-3">{entry.code}</td>
+									<td className="p-3">{entry.dept}</td>
+								</tr>
+							);
+						else
+							return (
+								<tr key={entry.id}>
+									<td className="p-3">{entry.id}</td>
+									<Link to="/academics/btech/syllabus/1/bs">
+										<td className="p-3">{entry.title}</td>
+									</Link>
+									<td className="p-3">{entry.code}</td>
+									<td className="p-3">{entry.dept}</td>
+								</tr>
+							);
 					})}
 				</tbody>
 			</Table>
