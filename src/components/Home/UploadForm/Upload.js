@@ -3,7 +3,7 @@ import ProgressBar from '../ProgressBar/ProgressBar';
 
 const Upload = () => {
   const [file, setFile] = useState(null);
-    const [error, setError] = useState(null);
+  const [error, setError] = useState(null);
     
   const types = ['image/png', 'image/jpeg'];
 
