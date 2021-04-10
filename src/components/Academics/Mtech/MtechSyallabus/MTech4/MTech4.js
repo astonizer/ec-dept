@@ -1,8 +1,7 @@
 import React from 'react';
 import { Table } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 
-function Btech1() {
+function Mtech1() {
 	const table = [
 		{
 			id: 1,
@@ -86,10 +85,9 @@ function Btech1() {
 		},
 	];
 	return (
-		<div>
+		<>
 			<h5 className="my-5" align="center">
-				Curriculum of B.Tech. 1st Year - EFFECTIVE FROM JULY 2020
-				ONWARDS
+            Curriculum of M.Tech. in <b>Communication System</b> 1st Year
 			</h5>
 			<Table striped responsive size="sm">
 				<thead>
@@ -102,33 +100,21 @@ function Btech1() {
 				</thead>
 				<tbody>
 					{table.map(entry => {
-						if (entry.id != 10)
-							return (
-								<tr key={entry.id}>
-									<td className="p-3">{entry.id}</td>
-									<td className="p-3">{entry.title}</td>
-									<td className="p-3">{entry.code}</td>
-									<td className="p-3">{entry.dept}</td>
-								</tr>
-							);
-						else
-							return (
-								<tr key={entry.id}>
-									<td className="p-3">{entry.id}</td>
-									<Link to="/academics/btech/syllabus/1/bs">
-										<td className="p-3">{entry.title}</td>
-									</Link>
-									<td className="p-3">{entry.code}</td>
-									<td className="p-3">{entry.dept}</td>
-								</tr>
-							);
+						return (
+							<tr key={entry.id}>
+								<td className="p-3">{entry.id}</td>
+								<td className="p-3">{entry.title}</td>
+								<td className="p-3">{entry.code}</td>
+								<td className="p-3">{entry.dept}</td>
+							</tr>
+						);
 					})}
 				</tbody>
 			</Table>
 			<br />
 			<h5>*** Subjects to be completed within two semesters.</h5>
-		</div>
+		</>
 	);
 }
 
-export default Btech1;
+export default Mtech1;
