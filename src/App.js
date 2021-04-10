@@ -1,13 +1,14 @@
 import { Route, Switch } from 'react-router-dom';
-import './App.css';
-import About from './components/About/About';
-import Academics from './components/Academics/Academics';
-import Contact from './components/Contact/Contact';
-import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
+import About from './components/About/About';
+import Contact from './components/Contact/Contact';
+import Academics from './components/Academics/Academics';
+import People from './components/People/People';
 import NoMatchPage from './components/NoMatchPage/NoMatchPage';
 import ScrollUp from './components/ScrollUp/ScrollUp';
+import Footer from './components/Footer/Footer';
+import './App.css';
 
 function App() {
 	return (
@@ -18,6 +19,7 @@ function App() {
 				<Route path="/about" component={About} />
 				<Route path="/contact" component={Contact} />
 				<Route path="/academics" component={Academics} />
+				<Route path="/people" component={People} />
 				<Route component={NoMatchPage} />
 			</Switch>
 			<ScrollUp />

@@ -1,0 +1,11 @@
+.facultycard{
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+}
+
+.profile{
+  margin: auto;
+  width: 180px !important;
+  height: 280px;
+}
