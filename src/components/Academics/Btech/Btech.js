@@ -1,5 +1,7 @@
 import React from 'react';
-import { Button, Card, Container } from 'react-bootstrap';
+import { Button, Card, Container, Nav } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
+import { Link } from 'react-router-dom';
 
 function Btech() {
 	return (
@@ -134,12 +136,28 @@ function Btech() {
 								B.Tech Syllabus (Batch-2019 onwards)
 							</Card.Title>
 							<Card.Body align="center">
-								<Button variant="outline-info" className="mx-2">
-									1st Year
-								</Button>
-								<Button variant="outline-info" className="mx-2">
-									2nd Year
-								</Button>
+								<Link
+									to="/academics/btech/syllabus/1"
+									className="text-info"
+								>
+									<Button
+										variant="outline-info"
+										className="mx-2"
+									>
+										1st Year
+									</Button>
+								</Link>
+								<Link
+									to="/academics/btech/syllabus/2"
+									className="text-info"
+								>
+									<Button
+										variant="outline-info"
+										className="mx-2"
+									>
+										2nd Year
+									</Button>
+								</Link>
 							</Card.Body>
 						</Card.Body>
 					</Card>
@@ -149,12 +167,28 @@ function Btech() {
 								B.Tech Syllabus (upto Batch-2018)
 							</Card.Title>
 							<Card.Body align="center">
-								<Button variant="outline-info" className="mx-2">
-									3rd Year
-								</Button>
-								<Button variant="outline-info" className="mx-2">
-									4th Year
-								</Button>
+								<Link
+									to="/academics/btech/syllabus/3"
+									className="text-info"
+								>
+									<Button
+										variant="outline-info"
+										className="mx-2"
+									>
+										3rd Year
+									</Button>
+								</Link>
+								<Link
+									to="/academics/btech/syllabus/4"
+									className="text-info"
+								>
+									<Button
+										variant="outline-info"
+										className="mx-2"
+									>
+										4th Year
+									</Button>
+								</Link>
 							</Card.Body>
 						</Card.Body>
 					</Card>
