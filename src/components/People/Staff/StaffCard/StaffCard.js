@@ -1,21 +1,21 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
-import './StaffCard.css'
+import './StaffCard.css';
 
-function StaffCard() {
+function StaffCard({ entry }) {
 	return (
-    <Card className="staffcard">
-      <Card.Img className="profile" src="" />
-      <Card.Body>
-        <Card.Title>Mr. Praful Patel</Card.Title>
-        <Card.Text>
-          <h6>Lab Assistant</h6>
-          E-mail: <h6>praful.patel.pp88@gmail.com </h6>
-          Phone: <h6>9574003375</h6>
-        </Card.Text>
-      </Card.Body>
-    </Card>
-  )
+		<Card className="staffcard">
+			<Card.Img className="profile" src="" />
+			<Card.Body>
+				<Card.Title>{entry.name}</Card.Title>
+				<Card.Text>
+					<h6>{entry.designation}</h6>
+					E-mail: <h6>{entry.email}</h6>
+					Phone: <h6>{entry.phone}</h6>
+				</Card.Text>
+			</Card.Body>
+		</Card>
+	);
 }
 
 export default StaffCard;
