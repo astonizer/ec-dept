@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Card } from 'react-bootstrap';
-import NoticeCard from './NoticeCard.js/NoticeCard';
+import NoticeCard from './NoticeCard/NoticeCard';
 
 function Notice() {
 	const [notices, setNotices] = useState([

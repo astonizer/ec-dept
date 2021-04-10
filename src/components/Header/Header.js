@@ -85,18 +85,19 @@ function Header() {
 								id="basic-nav-dropdown"
 								className="text-light"
 							>
-								<NavDropdown.Item href="#action/3.1">
-									Action
+								<LinkContainer to="/people/faculty">
+									<NavDropdown.Item href="#">
+										Faculty
+									</NavDropdown.Item>
+								</LinkContainer>								
+								<NavDropdown.Item href="/people/staff">
+									Staff
 								</NavDropdown.Item>
-								<NavDropdown.Item href="#action/3.2">
-									Another action
+								<NavDropdown.Item href="/people/phd">
+									Ph. D. Students
 								</NavDropdown.Item>
-								<NavDropdown.Item href="#action/3.3">
-									Something
-								</NavDropdown.Item>
-								<NavDropdown.Divider />
-								<NavDropdown.Item href="#action/3.4">
-									Separated link
+								<NavDropdown.Item href="/people/mtech">
+									M. Tech. Students
 								</NavDropdown.Item>
 							</NavDropdown>
 						</Nav>
