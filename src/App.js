@@ -6,6 +6,7 @@ import Contact from './components/Contact/Contact';
 import Academics from './components/Academics/Academics';
 import BS from './components/Academics/Btech/BtechSyllabus/Btech1/BS/BS';
 import BtechSyllabus from './components/Academics/Btech/BtechSyllabus/BtechSyllabus';
+import Research from './components/Research/Research';
 import People from './components/People/People';
 import MTechSyllabus from './components/Academics/Mtech/MtechSyallabus/MTechSyllabus';
 import NoMatchPage from './components/NoMatchPage/NoMatchPage';
@@ -32,7 +33,8 @@ function App() {
 					component={MTechSyllabus}
 				/>
 				<Route path="/academics" component={Academics} />
-				<Route path="/people" component={People} />
+				<Route path="/research" component={Research} />
+				<Route path="/people" component={People} />				
 				<Route component={NoMatchPage} />
 			</Switch>
 			<ScrollUp />
