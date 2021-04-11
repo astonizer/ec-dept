@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router';
 import { Container, Tabs, Tab } from 'react-bootstrap';
 import List from './List/List';
-import './Mtech.css';
 
 function Mtech() {
 

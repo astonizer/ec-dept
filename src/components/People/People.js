@@ -17,8 +17,10 @@ function People() {
       <Staff />
     ) : tab === 'phd' ? (
       <PhD />
-    ) : (
+    ) : tab == 'mtech' ? (
       <Mtech />
+    ) : (
+      null
     )}
     </>
 	);

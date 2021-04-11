@@ -66,19 +66,36 @@ function Header() {
 								id="basic-nav-dropdown"
 								className="text-light"
 							>
-								<NavDropdown.Item href="#action/3.1">
-									Action
-								</NavDropdown.Item>
-								<NavDropdown.Item href="#action/3.2">
-									Another action
-								</NavDropdown.Item>
-								<NavDropdown.Item href="#action/3.3">
-									Something
-								</NavDropdown.Item>
-								<NavDropdown.Divider />
-								<NavDropdown.Item href="#action/3.4">
-									Separated link
-								</NavDropdown.Item>
+								<LinkContainer to="/research/sponsored">
+									<NavDropdown.Item href="#">
+										Sponsored Research Projects
+									</NavDropdown.Item>
+								</LinkContainer>
+								<LinkContainer to="/research/facilities">
+									<NavDropdown.Item href="#">
+										Research Facilities
+									</NavDropdown.Item>
+								</LinkContainer>
+								<LinkContainer to="/research/pgdissertation">
+									<NavDropdown.Item href="#">
+										PG Dissertation
+									</NavDropdown.Item>
+								</LinkContainer>
+								<LinkContainer to="/research/pgseminar">	
+									<NavDropdown.Item href="#">
+										PG Seminar
+									</NavDropdown.Item>
+								</LinkContainer>
+								<LinkContainer to="/research/ugproject">
+									<NavDropdown.Item href="#">
+										UG Project
+									</NavDropdown.Item>
+								</LinkContainer>
+								<LinkContainer to="/research/upseminar">
+									<NavDropdown.Item href="#">
+										UG Seminar
+									</NavDropdown.Item>
+								</LinkContainer>
 							</NavDropdown>
 							<NavDropdown
 								title="People"
@@ -89,16 +106,22 @@ function Header() {
 									<NavDropdown.Item href="#">
 										Faculty
 									</NavDropdown.Item>
-								</LinkContainer>								
-								<NavDropdown.Item href="/people/staff">
-									Staff
-								</NavDropdown.Item>
-								<NavDropdown.Item href="/people/phd">
-									Ph. D. Students
-								</NavDropdown.Item>
-								<NavDropdown.Item href="/people/mtech">
-									M. Tech. Students
-								</NavDropdown.Item>
+								</LinkContainer>
+								<LinkContainer to="/people/staff">
+									<NavDropdown.Item href="#">
+										Staff
+									</NavDropdown.Item>
+								</LinkContainer>
+								<LinkContainer to="/people/phd">
+									<NavDropdown.Item href="#">
+										Ph. D. Students
+									</NavDropdown.Item>
+								</LinkContainer>
+								<LinkContainer to="/people/mtech">
+									<NavDropdown.Item href="#">
+										M. Tech. Students
+									</NavDropdown.Item>
+								</LinkContainer>
 							</NavDropdown>
 						</Nav>
 					</Navbar.Collapse>
