@@ -8,6 +8,7 @@ import BS from './components/Academics/Btech/BtechSyllabus/Btech1/BS/BS';
 import BtechSyllabus from './components/Academics/Btech/BtechSyllabus/BtechSyllabus';
 import Research from './components/Research/Research';
 import People from './components/People/People';
+import MTechSyllabus from './components/Academics/Mtech/MtechSyallabus/MTechSyllabus';
 import NoMatchPage from './components/NoMatchPage/NoMatchPage';
 import ScrollUp from './components/ScrollUp/ScrollUp';
 import Footer from './components/Footer/Footer';
@@ -26,6 +27,10 @@ function App() {
 				<Route
 					path="/academics/btech/syllabus"
 					component={BtechSyllabus}
+				/>
+				<Route
+					path="/academics/mtech/syllabus"
+					component={MTechSyllabus}
 				/>
 				<Route path="/academics" component={Academics} />
 				<Route path="/research" component={Research} />
