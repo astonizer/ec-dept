@@ -1,10 +1,16 @@
 import React from 'react';
 import { Container, Table } from 'react-bootstrap';
 import './List.css';
-
+import useFirestore from '../../../../hooks/useFirestore';
 
 function List({ status }) {
-	return(
+
+	const a = useFirestore('mtech');
+	console.log(a);
+
+	// const [docs, setDocs] = useState([]);
+
+	return (
 		<Container>
 			<h4 className="title">
 				{status ? 'Ongoing Ph.D Student\'s List' : 'Completed Ph.D Students List(updated upto March-2021)'}
@@ -16,26 +22,27 @@ function List({ status }) {
 						<th>Roll No</th>
 						<th>Name</th>
 						<th>Category</th>
-						<th>Research Area/Thesis Title</th>
-						{	!status &&	<th>Viva-Voce Ph. D Date</th>}
+						{!status && <th>Viva-Voce Ph. D Date</th>}
 						<th>Supervisor’s Name</th>
-						{ !status &&	 <th>Examiner's Name</th>}
+						{!status && <th>Examiner's Name</th>}
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<td>1</td>
-						<td>Mark</td>
-						<td>Otto</td>
-						<td>@mdo</td>
-						<td>Otto</td>
-						{ !status && <td>Otto</td>}					
-						<td>@mdo</td>
-						{ !status && <td>Otto</td>}
-					</tr>
+
+					{
+						a.map((st, index) => {
+							<tr>
+								<td>{index}</td>
+								<td>{st.roll}</td>
+								<td>{st.name}</td>
+								<td>{st.category}</td>
+								<td>{st.supervisor}</td>
+							</tr>
+						})
+					}
 				</tbody>
 			</Table>
-		</Container>
+		</Container >
 	)
 }
 
