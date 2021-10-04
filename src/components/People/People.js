@@ -4,6 +4,7 @@ import Facultys from './Facultys/Facultys';
 import Staff from './Staff/Staff';
 import PhD from './PhD/PhD';
 import Mtech from './Mtech/Mtech';
+import useFirestore from '../../hooks/useFirestore';
 
 function People() {
   const path = useHistory().location;
